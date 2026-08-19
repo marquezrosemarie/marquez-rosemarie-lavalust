@@ -15,6 +15,7 @@ class StudentController extends Controller
             'address' => 'Bayanan 1 Calapan City Oriental Mindoro, Philippines',
             'contact' => '+63 977 650 7921',
             'facebook' => 'https://www.facebook.com/xoxo.rosee23',
+            'profile_picture' => 'profile.jpg',
             'characteristics' => [
                 'Hindi mabilis magalit',
                 'May patience',
