@@ -14,7 +14,12 @@ class StudentController extends Controller
             'email' => 'marquezrosemarie152@gmail.com',
             'address' => 'Bayanan 1 Calapan City Oriental Mindoro, Philippines',
             'contact' => '+63 977 650 7921',
-            'skills' => ['Hindi mabilis magalit', 'May patience', 'Mabilis gumayak']
+            'facebook' => 'https://www.facebook.com/xoxo.rosee23',
+            'characteristics' => [
+                'Hindi mabilis magalit',
+                'May patience',
+                'Mabilis gumayak'
+            ]
         ];
     }
 
