@@ -44,8 +44,26 @@ class StudentController extends Controller
     {
         $this->call->view('student_home', [
             'page_title' => 'Student Home',
-            'student' => $this->studentData()
+            'student' => $this->studentData(),
+            'middleware_protection_enabled' => !empty($_SESSION['middleware_protection_enabled']),
+            'middleware_blocked' => isset($_GET['middleware_blocked'])
         ]);
+    }
+
+    public function toggleMiddleware()
+    {
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+
+        if (($_SERVER['REQUEST_METHOD'] ?? 'GET') !== 'POST') {
+            redirect('student');
+            return;
+        }
+
+        $_SESSION['middleware_protection_enabled'] = empty($_SESSION['middleware_protection_enabled']);
+        redirect('student');
+        exit;
     }
 
     public function profile()
